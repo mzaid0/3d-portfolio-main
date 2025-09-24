@@ -22,7 +22,7 @@ export function ContactSection({ isDark }: ContactSectionProps) {
       href: "mailto:shabaan.mehmood@gmail.com",
     },
     { icon: Phone, label: "Phone", value: "+49 176 14657631", href: "tel:+4917614657631" },
-    { icon: MapPin, label: "Location", value: "Berlin, Germany", href: "#" },
+    { icon: MapPin, label: "Location", value: "Bamberg, Germany", href: "#" },
   ]
 
   const socialLinks = [
