@@ -7,6 +7,65 @@ export interface Project {
   image: string
   tech: string[]
   gradient: string
+  category?: string
+  year?: string
+  status?: string
+  modelType?: string
+  features?: string[]
+  challenge?: string
+  solution?: string
+  impact?: string
+  liveLinks?: {
+    playStore?: string
+    appStore?: string
+    web?: string
+  }
+  githubLink?: string
+  stats?: {
+    views: string
+    likes: string
+    downloads: string
+    rating: string
+  }
+  technologies?: Array<{
+    name: string
+    icon: LucideIcon
+    items: Array<{
+      name: string
+      description: string
+    }>
+  }>
+  timeline?: Array<{
+    title: string
+    duration: string
+    icon: LucideIcon
+    description: string
+    deliverables: string[]
+  }>
+  gallery?: Array<{
+    title: string
+    description: string
+    url: string
+  }>
+  results?: {
+    metrics: Array<{
+      value: string
+      label: string
+      description: string
+    }>
+    testimonials: Array<{
+      content: string
+      author: string
+      role: string
+      rating: number
+    }>
+  }
+  relatedProjects?: Array<{
+    title: string
+    description: string
+    category: string
+    image: string
+  }>
 }
 
 export interface Skill {

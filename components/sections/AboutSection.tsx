@@ -10,9 +10,9 @@ interface AboutSectionProps {
 
 export function AboutSection({ isDark }: AboutSectionProps) {
   const stats = [
-    { number: "100+", label: "Projects", icon: Briefcase },
-    { number: "7+", label: "Years", icon: Award },
-    { number: "50+", label: "Clients", icon: User },
+    { number: "10+", label: "Projects", icon: Briefcase },
+    { number: "5+", label: "Years", icon: Award },
+    // { number: "50+", label: "Clients", icon: User },
   ]
 
   const features = [
@@ -48,13 +48,12 @@ export function AboutSection({ isDark }: AboutSectionProps) {
             <Card className="glass-ultra border border-white/20 p-10 shiny magnetic">
               <CardContent className="p-0">
                 <h3 className="text-3xl font-bold mb-8 text-white">My Journey</h3>
-                <p className="text-xl leading-relaxed mb-8 text-white/80">
-                  With over 7 years of experience in cutting-edge web development and digital design, I specialize in
-                  creating immersive experiences that blur the line between the digital and physical worlds.
+                <p className="text-md leading-relaxed mb-8 text-white/80">
+                  Great apps don’t just run. They connect people, solve problems, and create impact.
+                  With expertise in Flutter and cross-platform technologies, I design and deploy products that deliver real value. I have hands-on experience in building, scaling, and maintaining mobile and web applications that are not only functional but also user-friendly.
                 </p>
-                <p className="text-xl leading-relaxed text-white/80">
-                  My passion lies in leveraging emerging technologies like WebGL, AI, and spatial computing to craft
-                  solutions that don't just meet today's needs, but anticipate tomorrow's possibilities.
+                <p className="text-md leading-relaxed text-white/80">
+                  My technical skills span Flutter, Firebase, Supabase, MongoDB, Django, and .NET, and I specialize in turning innovative ideas into scalable digital solutions that make an impact.
                 </p>
               </CardContent>
             </Card>

@@ -18,17 +18,17 @@ export function ContactSection({ isDark }: ContactSectionProps) {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@digitalarchitect.dev",
-      href: "mailto:hello@digitalarchitect.dev",
+      value: "shabaan.mehmood@gmail.com",
+      href: "mailto:shabaan.mehmood@gmail.com",
     },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: MapPin, label: "Location", value: "San Francisco, CA", href: "#" },
+    { icon: Phone, label: "Phone", value: "+49 176 14657631", href: "tel:+4917614657631" },
+    { icon: MapPin, label: "Location", value: "Berlin, Germany", href: "#" },
   ]
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "#", label: "Email" },
+    { icon: Github, href: "https://github.com/shabaanmehmood", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/shabaan-meh/", label: "LinkedIn" },
+    { icon: Mail, href: "shabaan.mehmood@gmail.com", label: "Email" },
   ]
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -82,7 +82,7 @@ export function ContactSection({ isDark }: ContactSectionProps) {
                 </div>
                 <div>
                   <p className={`text-sm ${isDark ? "text-white/60" : "text-slate-600"}`}>{contact.label}</p>
-                  <p className={`text-lg font-medium ${isDark ? "text-white" : "text-slate-800"}`}>{contact.value}</p>
+                  <p className={`text-sm font-medium ${isDark ? "text-white" : "text-slate-800"}`}>{contact.value}</p>
                 </div>
               </motion.a>
             ))}

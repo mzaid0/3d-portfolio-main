@@ -5,11 +5,12 @@ import { ArrowRight, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { projects } from "@/data/projects"
+import { projectsData } from "@/data/projects"
+import type { Project } from "@/types"
 
 interface ProjectsSectionProps {
   isDark: boolean
-  onProjectSelect: (project: any) => void
+  onProjectSelect: (project: Project) => void
 }
 
 export function ProjectsSection({ isDark, onProjectSelect }: ProjectsSectionProps) {
@@ -32,7 +33,7 @@ export function ProjectsSection({ isDark, onProjectSelect }: ProjectsSectionProp
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
@@ -98,6 +99,24 @@ export function ProjectsSection({ isDark, onProjectSelect }: ProjectsSectionProp
             </motion.div>
           ))}
         </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <Button
+            asChild
+            className="bg-gradient-to-r from-cyan-500 to-slate-500 text-white border-0 py-3 px-8 rounded-xl font-semibold hover:from-cyan-600 hover:to-slate-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+          >
+            <a href="/projects">
+              View All Projects
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </section>
   )

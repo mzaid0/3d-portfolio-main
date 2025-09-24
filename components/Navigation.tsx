@@ -60,7 +60,7 @@ export function Navigation({
           {/* Mobile Navigation Toggle */}
           <div className="flex lg:hidden items-center space-x-2 w-full justify-between">
             <div className="text-lg sm:text-xl font-bold bg-gradient-to-r from-cyan-400 to-slate-400 bg-clip-text text-transparent">
-              M.Zaid
+              Shabaan Mehmood
             </div>
             <motion.button
               whileHover={{ scale: 1.1 }}

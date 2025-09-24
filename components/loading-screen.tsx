@@ -128,7 +128,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                   transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                   className="text-[4vmin] font-bold text-black"
                 >
-                  MZ
+                  SM
                 </motion.div>
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                   transition={{ duration: 0.5 }}
                   className="text-[3vmin] font-bold text-white mb-[2vmin]"
                 >
-                  Welcome to Zaid's Techverse
+                  Welcome to Shabaan's Techverse
                 </motion.div>
               </motion.div>
             )}

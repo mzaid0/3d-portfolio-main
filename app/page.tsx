@@ -16,6 +16,7 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import type { Project } from "@/types";
+import { useLoadingContext } from "@/contexts/LoadingContext";
 
 const DynamicCanvas = dynamic(
   () =>
@@ -28,11 +29,15 @@ const DynamicCanvas = dynamic(
 export default function UltraModernPortfolio() {
   const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isProjectOpen, setIsProjectOpen] = useState(false);
+  const { hasLoadedOnce, setHasLoadedOnce } = useLoadingContext();
+  const [isLoading, setIsLoading] = useState(!hasLoadedOnce);
 
-  const handleLoadingComplete = () => setIsLoading(false);
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+    setHasLoadedOnce(true);
+  };
   const handleProjectSelect = (project: Project) => {
     if (project) {
       setSelectedProject(project);
@@ -57,7 +62,6 @@ export default function UltraModernPortfolio() {
         className="relative min-h-screen bg-black"
         style={{ cursor: "auto" }}
       >
-        {/* ✅ Dynamically loaded 3D Canvas to prevent SSR errors */}
         <div className="fixed inset-0 z-0">
           <DynamicCanvas />
         </div>
@@ -96,13 +100,13 @@ export default function UltraModernPortfolio() {
                 className="space-y-6"
               >
                 <div className="text-3xl font-black text-white tracking-wide">
-                  ZAID — FULL-STACK VISIONARY
+                  SHABAAN — FULL-STACK VISIONARY
                 </div>
                 <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-                  Built with React.js, Next.js, Supabase, Docker, Redis, and
-                  TypeScript. Featuring projects like{" "}
-                  <span className="font-semibold">CareSync</span> &{" "}
-                  <span className="font-semibold">Skylance AI</span>.
+                  Built with Flutter, Dart, XCode, Android, Supabase, Firebase, Postgres , Mongo, MySql,  Docker, and
+                  . Featuring projects like{" "}
+                  <span className="font-semibold">Rishta Nagar</span> &{" "}
+                  <span className="font-semibold">Iqbal Foods</span>.
                 </p>
                 <p className="text-white/50 italic">
                   Engineering impactful digital experiences — one scalable
