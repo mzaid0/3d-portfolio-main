@@ -7,7 +7,7 @@ import { LoadingProvider } from "@/contexts/LoadingContext"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Modern Portfolio 2025",
+  title: "Shabaan Mohamed ",
   description: "A modern, professional portfolio website with smooth animations and futuristic design",
     generator: 'v0.dev'
 }
